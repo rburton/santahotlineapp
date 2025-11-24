@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Santa Hotline — Magical Christmas Video Calls for Kids</title>
+
+  <!-- iOS Smart App Banner (opens App Store page on iPhone/iPad Safari) -->
+  <!-- Replace YOUR_APP_ID with the real App Store ID when available -->
+  <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID, app-argument=https://apps.apple.com/app/6755404824" />
+
+  <!-- Apple icons (optional) -->
+  <link rel="apple-touch-icon" href="/images/santa-claus.png" />
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Santa Hotline — Magical Christmas Video Calls for Kids" />
+  <meta name="description" content="Ho ho ho! Spark Christmas joy with realistic, 20‑second video calls from Santa, Mrs. Claus, the Snowman, Elves, and more. Ad‑free, kid‑safe, and we store no photos, videos, or personal data." />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://santahotline.app/" />
+  <meta property="og:title" content="Santa Hotline — Magical Christmas Video Calls for Kids" />
+  <meta property="og:description" content="Realistic Christmas video calls from the North Pole. Kid‑safe: we do not store photos, videos, or information about children." />
+  <meta property="og:image" content="/images/main.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://santahotline.app/" />
+  <meta property="twitter:title" content="Santa Hotline — Magical Christmas Video Calls for Kids" />
+  <meta property="twitter:description" content="Ho ho ho! Magical, kid‑friendly Christmas video calls. No ads. No tracking. Nothing stored." />
+  <meta property="twitter:image" content="/images/main.png" />
+
+  <style>
+    :root{
+      --christmas-red:#C8212D;
+      --christmas-green:#0B6E4F;
+      --christmas-gold:#FFD166;
+      --snow:#F7FBFF;
+      --ink:#17212A;
+    }
+
+    html,body{
+      margin:0;
+      padding:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(255,255,255,.25), rgba(255,255,255,0)),
+                  linear-gradient(180deg, rgba(12,30,22,.7), rgba(12,30,22,.9)),
+                  url('/images/main.png') center/cover no-repeat fixed;
+      background-attachment: fixed;
+    }
+
+    a{ color: var(--christmas-gold); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: clamp(16px, 4vw, 32px);
+    }
+
+    header{
+      text-align: center;
+      padding: 32px 0 24px;
+      color: white;
+    }
+    .badge{
+      display:inline-block;
+      background: linear-gradient(135deg, var(--christmas-red), #E53935);
+      color:white;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
+    h1{
+      margin: 12px 0 8px;
+      font-size: clamp(28px, 5.5vw, 56px);
+      line-height: 1.05;
+      color: var(--snow);
+      text-shadow: 0 2px 0 rgba(0,0,0,.25);
+    }
+    .sub{
+      font-size: clamp(16px, 2.8vw, 22px);
+      color: #F9FAFB;
+      opacity: .95;
+    }
+
+    .cta-row{
+      margin-top: 20px;
+      display:flex; gap:12px; justify-content:center; flex-wrap: wrap;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      background: var(--christmas-green);
+      color:white; padding: 12px 18px; border-radius: 12px;
+      font-weight: 700; border: 2px solid rgba(255,255,255,.15);
+      box-shadow: 0 6px 18px rgba(0,0,0,.25);
+    }
+    .btn.secondary{ background: transparent; color: white; border-color: rgba(255,255,255,.35); }
+
+    .features{
+      margin: 32px auto; 
+      display:grid; grid-template-columns: repeat(12, 1fr); gap: 16px;
+    }
+    .card{
+      grid-column: span 6;
+      background: rgba(255,255,255,.9);
+      backdrop-filter: blur(4px);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, .25);
+    }
+    .card h3{ margin-top: 6px; color: var(--christmas-green); }
+    .card p{ margin: 8px 0 0; }
+
+    .characters{
+      display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px;
+      margin: 10px 0 24px;
+    }
+    .char{
+      grid-column: span 4;
+      background: white; border-radius: 14px; overflow: hidden;
+      border: 1px solid #E5E7EB;
+    }
+    .char img{ width:100%; height: 180px; object-fit: cover; display:block; }
+    .char b{ display:block; padding:10px 12px; background: linear-gradient(90deg, rgba(200,33,45,.06), rgba(11,110,79,.06)); }
+
+    .trust{
+      background: rgba(255, 255, 255, .92);
+      border: 1px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 16px;
+      margin: 16px 0 32px;
+    }
+    .trust h3{ margin: 6px 0; color: var(--christmas-red); }
+
+    footer{
+      color: #F8FAFC;
+      text-align:center;
+      padding: 24px 0 48px;
+    }
+    .links{ display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top: 10px; }
+    .links a{ color: #fff; opacity: .95; }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .card{ grid-column: span 12; }
+      .char{ grid-column: span 6; }
+    }
+    @media (max-width: 560px){
+      .char{ grid-column: span 12; }
+      .char img{ height: 200px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <span class="badge">Ho Ho Ho!</span>
+    <h1>Santa Hotline — Real Video Calls from the North Pole</h1>
+    <p class="sub">Let your little elves chat with Santa, Mrs. Claus, the Lead Elf, a friendly Reindeer, Santa’s Helpers, or a giggly Snowman. Every call is short, sweet, and full of cheer!</p>
+    <div class="cta-row">
+      <a class="btn" href="https://apps.apple.com/app/6755404824" rel="noopener" target="_blank">Download on the App Store</a>
+      <a class="btn secondary" href="#features">See Features</a>
+    </div>
+  </header>
+
+  <main class="wrap" id="features">
+    <section class="features">
+      <article class="card">
+        <!-- IMAGE PLACEHOLDER: Hero Santa & kids video call overlay -->
+        <!-- Nano Banana prompt: "Warm, magical Christmas scene of Santa in a cozy workshop, soft golden lights, bokeh, joyful atmosphere; overlay hint of a phone UI video call; rich reds, greens, and gold; photorealistic, 4k, festive, kid‑friendly." -->
+        <h3>Magical Video Calls</h3>
+        <p>Choose from six festive friends and enjoy realistic, 24‑second video chats that feel straight from the North Pole. It’s pure wonder in the palm of your hand.</p>
+      </article>
+
+      <article class="card">
+        <!-- IMAGE PLACEHOLDER: Randomized fun -->
+        <!-- Nano Banana prompt: "Grid of character thumbnails (Santa, Mrs. Claus, elf, reindeer, helpers, snowman) with playful sparkles and the words ‘New every call!’; bright Christmas palette, kid‑safe vibe." -->
+        <h3>Always a Fresh Surprise</h3>
+        <p>Call back anytime! Each character has two unique video variations, so every chat feels new and extra merry.</p>
+      </article>
+
+      <article class="card">
+        <!-- IMAGE PLACEHOLDER: Safety & privacy -->
+        <!-- Nano Banana prompt: "Friendly shield with a snowflake and heart icon, Christmas colors, clean iOS‑style illustration, representing privacy, safety, no data storage." -->
+        <h3>Built for Families — Safe and Ad‑Free</h3>
+        <p>Made with parents in mind: no ads, no in‑app purchases, and no sign‑ups. Simple, joyful play for kids of all ages.</p>
+      </article>
+
+<!--        <article class="card">-->
+<!--            &lt;!&ndash; IMAGE PLACEHOLDER: Santa tracker countdown &ndash;&gt;-->
+<!--            &lt;!&ndash; Nano Banana prompt: "Whimsical North Pole dashboard showing a cheerful countdown to Christmas Eve, snowy accents, candy‑cane borders, soft glow lights, vector/illustrative style matching iOS marketing page." &ndash;&gt;-->
+<!--            <h3>Santa Tracker Countdown</h3>-->
+<!--            <p>Watch the excitement grow with a live countdown to Santa’s big night — days, hours, and minutes until the sleigh takes off!</p>-->
+<!--        </article>-->
+
+    </section>
+
+    <section aria-label="Characters" class="characters">
+      <div class="char">
+        <!-- Existing app artwork (preview). Replace if desired. -->
+        <img src="/images/santa-claus-headshot.jpg" alt="Santa Claus video call preview" />
+        <b>Santa Claus</b>
+      </div>
+      <div class="char">
+        <img src="/images/mrs-claus-headshot.png" alt="Mrs. Claus video call preview" />
+        <b>Mrs. Claus</b>
+      </div>
+      <div class="char">
+        <img src="/images/elf-headshot.png" alt="Henry the Elf video call preview" />
+        <b>Henry the Elf</b>
+      </div>
+      <div class="char">
+        <img src="/images/reindeer-headshot.png" alt="Reindeer video call preview" />
+        <b>Reindeer</b>
+      </div>
+      <div class="char">
+        <img src="/images/elves-headshot.png" alt="Santa’s Helpers video call preview" />
+        <b>Santa’s Helpers</b>
+      </div>
+      <div class="char">
+        <img src="/images/flurry-headshot.png" alt="Flurry the Snowman video call preview" />
+        <b>Flurry the Snowman</b>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Privacy and safety">
+      <h3>Your Child’s Privacy Comes First</h3>
+      <p>
+        We do not store videos, photos, images, voice recordings, names, ages, or any information about children — ever.
+        Santa Hotline processes only what’s necessary for the app to function during a call, then it’s gone.
+      </p>
+      <p>There’s no tracking across apps or websites, and the experience is completely ad‑free.</p>
+    </section>
+
+    <div class="cta-row">
+      <a class="btn" href="https://apps.apple.com/app/6755404824" rel="noopener" target="_blank">Get Santa Hotline</a>
+      <a class="btn secondary" href="/privacy.html">Privacy Policy</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="links">
+        <a href="/privacy.html" target="_blank">Privacy Policy</a>
+        <a href="/tos.html">Terms of Use</a>
+        <a href="/disclaimers.html">Disclaimers</a>
+        <a href="https://apps.apple.com/app/6755404824" target="_blank" rel="noopener">Download App</a>
+      </div>
+      <p style="margin-top:10px; opacity:.9">© <span id="year"></span> Santa Hotline. Merry Christmas from the North Pole! 🎄</p>
+    </div>
+  </footer>
+
+  <script>
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
